@@ -16,7 +16,7 @@ const Home = () => {
     timerState, clearTimerState, settings, theme, setTimerState
   } = useStore(state => state)
   const [taskName, setTaskName] = useState<string>('')
-  const [idToDelete, setIdToDelete] = useState<tTask['id']>(null)
+  const [idToDelete, setIdToDelete] = useState<tTask['id']>('')
   const [disableInteractive, setDisableInteractive] = useState<boolean>(false)
   const [currentTaskEdit, setCurrentTaskEdit] = useState<tTask['id'] | null>(null)
   const [restTimer, setRestTimer] = useState(timerState.restTimer)

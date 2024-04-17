@@ -141,6 +141,7 @@ const store:tStore = (set) => ({
       const task = state.tasks.find(task => task.id === id)
       // console.log(task)
       for (const taskElement of Object.keys(newTaskProperties)) {
+        if (task)
         task[taskElement] = newTaskProperties[taskElement]
       }
       const newTasks = [...state.tasks].map(task => {

@@ -16,7 +16,7 @@ const Settings:FC = () => {
   }, [])
 
   const isDarkTheme = theme === 'dark'
-  const printTime = (sec) => {
+  const printTime = (sec: number) => {
     const minutes = Math.floor(sec / 60)
     const seconds = Math.floor(sec % 60)
     return `${minutes} мин ${seconds} сек`

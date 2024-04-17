@@ -1,6 +1,7 @@
 import {FC, useEffect, useRef, useState} from 'react';
 import c from './RestTimer.module.css'
 import boop from '../../assets/sounds/microwave.mp3';
+// @ts-ignore
 import useSound from "use-sound";
 import {useStore} from "../../store";
 

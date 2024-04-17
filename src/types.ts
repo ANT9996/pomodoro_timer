@@ -1,4 +1,3 @@
-import { WEEKS } from './constants';
 export type tTask = {
   id: string,
   pomodoroCost: number,

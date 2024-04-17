@@ -8,7 +8,7 @@ import deleteImg from "../../assets/img/svg/delete.svg";
 import {tTask} from "../../types";
 
 type iTask = tTask & {
-  onEdit: (name: tTask['name'], id: tTask['id'], newProperties: Partial<tTask>) => void
+  onEdit: (id: tTask['id'], newProperties: Partial<tTask>) => void
   onChangeName: () => void
   selectId: () => void
 }
@@ -38,11 +38,11 @@ const Task:FC<iTask> = ({pomodoroCost, name, id, onEdit, onChangeName, selectId}
         <div ref={dots} className={`${c.taskOptionsDots} ${showOptions ? c.changeOpacityMode : ''}`} onClick={clickHandler}>
           <img className={c.dotsImage} src={dotsImg} alt={''}/>
           {showOptions && <ul className={c.taskOptions}>
-            <li className={c.taskOption} onClick={() => onEdit(name, id,{pomodoroCost: pomodoroCost + 1})}>
+            <li className={c.taskOption} onClick={() => onEdit(id,{pomodoroCost: pomodoroCost + 1})}>
               <img src={plusImg} alt=""/>
               <span>Увеличить</span>
             </li>
-            <li className={c.taskOption} onClick={() => onEdit(name, id, {pomodoroCost: Math.max(pomodoroCost - 1, 1)})}>
+            <li className={c.taskOption} onClick={() => onEdit(id, {pomodoroCost: Math.max(pomodoroCost - 1, 1)})}>
               <img src={minusImg} alt=""/>
               <span>Уменьшить</span>
             </li>

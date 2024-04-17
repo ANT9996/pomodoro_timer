@@ -59,7 +59,7 @@ const Home = () => {
     }, 700)
   }
 
-  const taskEditHandler = (name: tTask['name'], id: tTask['id'], changeProperties: Partial<tTask>) => {
+  const taskEditHandler = (id: tTask['id'], changeProperties: Partial<tTask>) => {
     editTask(id, changeProperties)
   }
 

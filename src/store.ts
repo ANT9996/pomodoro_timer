@@ -1,5 +1,5 @@
 import {create, StateCreator} from "zustand";
-import {tDay, tSettings, tTask, tTheme, tTimerState} from "./types";
+import {tDay, tDayOfWeek, tSettings, tTask, tTheme, tTimerState} from "./types";
 import LocalStorage from "./helpers/LocalStorage";
 import createDayId from "./helpers/createDayId";
 import {DaysOfWeekReverse} from "./enums";
@@ -67,9 +67,9 @@ const store:tStore = (set) => ({
     }
     const dayOfWeek = new Date().toLocaleDateString('ru-Ru', {weekday: 'long'}).replace(/^[а-я]/g, function (el, index) {
       return index === 0 ? el.toUpperCase() : el
-    })
+    }) as tDayOfWeek
     // console.log(dayOfWeek)
-    const newDay = {
+    const newDay: tDay = {
       id: createDayId(),
       name: DaysOfWeekReverse[dayOfWeek],
       pomodoros: 0,
@@ -140,9 +140,10 @@ const store:tStore = (set) => ({
     set((state) => {
       const task = state.tasks.find(task => task.id === id)
       // console.log(task)
+      if (!task) return (state)
       for (const taskElement of Object.keys(newTaskProperties)) {
-        if (task)
-        task[taskElement] = newTaskProperties[taskElement]
+      // @ts-ignore
+        task[taskElement as keyof tTask] = newTaskProperties[taskElement as keyof tTask]
       }
       const newTasks = [...state.tasks].map(task => {
         if (task.id === id) return {...task, ...newTaskProperties}
@@ -157,7 +158,8 @@ const store:tStore = (set) => ({
       if (!day) return (state)
       // console.log('изменение дня', day)
       for (const dayElement of Object.keys(newDayProperties)) {
-        day[dayElement] = newDayProperties[dayElement]
+        // @ts-ignore
+        day[dayElement as keyof tDay] = newDayProperties[dayElement as keyof tDay]
       }
       const newDays = [...state.days].map(day => {
         if (day.id === id) return {...day, ...newDayProperties}
@@ -169,7 +171,7 @@ const store:tStore = (set) => ({
 
   clearTimerState: () => {
     set((state) => {
-      const newState = {
+      const newState: Partial<tTimerState> = {
         timeLeft: (LocalStorage.getSettingsFromStorage().pomodoroTimeCost),
         pauseCount: 0,
         pauseTime: 0,

@@ -4,6 +4,8 @@ export type tTask = {
   name: string
 }
 
+export type tDayOfWeek = 'Понедельник' |'Вторник' |'Среда' |'Четверг' |'Пятница' |'Суббота' |'Воскресенье'
+
 export type tDay = {
   id: string,
   name: 'Пн' | 'Вт' | 'Ср' | 'Чт' | 'Пт' | 'Сб' | 'Вс',

@@ -1,4 +1,4 @@
-import React, {FC, PropsWithChildren} from 'react';
+import {FC, PropsWithChildren} from 'react';
 import {layout} from './Layout.module.css'
 const Layout: FC<PropsWithChildren> = ({children}) => {
   return (

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import c from './Stats.module.css'
 import tomatoImg from '../../assets/img/png/tomato.png'
 import tomatoHappyImg from '../../assets/img/png/tomatoHappy.png'

@@ -1,4 +1,4 @@
-import React, {FC, PropsWithChildren, useEffect, useRef} from 'react';
+import {FC, PropsWithChildren, useEffect, useRef} from 'react';
 import c from "./TasksList.module.css";
 
 interface iTaskList {

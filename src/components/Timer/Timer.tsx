@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useRef, useState} from 'react';
+import {FC, useEffect, useRef, useState} from 'react';
 import c from './Timer.module.css'
 import {tTask} from "../../types";
 import {useStore} from "../../store";

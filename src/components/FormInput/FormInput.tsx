@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 import c from "./FormInput.module.css";
 
 interface iFromInput {

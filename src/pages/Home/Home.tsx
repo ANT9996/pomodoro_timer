@@ -1,4 +1,4 @@
-import React, {FormEvent, useEffect, useRef, useState} from 'react';
+import {FormEvent, useEffect, useRef, useState} from 'react';
 import c from './Home.module.css'
 import Timer from "../../components/Timer/Timer";
 import Task from "../../components/Task/Task";

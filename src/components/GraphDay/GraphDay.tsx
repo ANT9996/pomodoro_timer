@@ -1,4 +1,4 @@
-import React, {FC, memo} from 'react';
+import {FC, memo} from 'react';
 import c from "./GraphDay.module.css";
 import {tDay} from "../../types";
 

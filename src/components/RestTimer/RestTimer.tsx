@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useRef, useState} from 'react';
+import {FC, useEffect, useRef, useState} from 'react';
 import c from './RestTimer.module.css'
 import boop from '../../assets/sounds/microwave.mp3';
 import useSound from "use-sound";

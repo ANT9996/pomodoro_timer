@@ -8,7 +8,7 @@ import {
 } from "../constants";
 
 const getTasksFromStorage = (): tTask[] => {
-  const parsed = JSON.parse(localStorage.getItem(LOCAL_NAME_TASKS))
+  const parsed = JSON.parse(localStorage.getItem(LOCAL_NAME_TASKS) || '[]')
   // console.log(parsed)
   return parsed || []
 }
@@ -19,7 +19,7 @@ const saveTasksToStorage = (tasks: tTask[]) => {
 }
 
 const getDaysFromStorage = (): tDay[] => {
-  const parsed = JSON.parse(localStorage.getItem(LOCAL_NAME_DAYS))
+  const parsed = JSON.parse(localStorage.getItem(LOCAL_NAME_DAYS) || '[]')
   // console.log(parsed)
   return parsed || []
 }
@@ -46,7 +46,7 @@ const setThemeToStorage = (theme: tTheme): tTheme => {
 }
 
 const getSettingsFromStorage = (): tSettings => {
-  const parsed = JSON.parse(localStorage.getItem(LOCAL_NAME_SETTINGS))
+  const parsed = JSON.parse(localStorage.getItem(LOCAL_NAME_SETTINGS) || '')
   if (!parsed) {
     const newSettings: tSettings = {
       pomodoroTimeCost: POMIDORO_TIME_COST,

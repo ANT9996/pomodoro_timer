@@ -1,3 +1,4 @@
+import { WEEKS } from './constants';
 export type tTask = {
   id: string,
   pomodoroCost: number,
@@ -31,7 +32,7 @@ export type tTimerState = {
   timeLeft: number
   pauseCount: number
   pauseTime: number
-  theme: CSSRule | ''
+  theme: string
   restTimer: boolean
   restTimerTime: number | null
   currentTaskIndex: number

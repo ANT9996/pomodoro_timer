@@ -77,8 +77,8 @@ const Home = () => {
     <div className={`${c.homeContainer} ${isDarkTheme ? c.darkHome : ''}`} style={{pointerEvents: disableInteractive ? 'none' : 'initial'}}>
       {idToDelete && <DeleteModal darkTheme={isDarkTheme} deleteTaskById={() => {
         deleteTask(idToDelete)
-        setIdToDelete(null)
-      }} clearId={() => setIdToDelete(null)}/>}
+        setIdToDelete('')
+      }} clearId={() => setIdToDelete('')}/>}
       <div className={c.tasks}>
         <h2 className={c.head}>Ура! Теперь можно начать работать:</h2>
         <ul className={c.infoList}>

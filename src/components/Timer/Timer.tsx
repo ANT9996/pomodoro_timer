@@ -4,6 +4,7 @@ import {tTask} from "../../types";
 import {useStore} from "../../store";
 import EmptyTimer from "../EmptyTimer/EmptyTimer";
 import boop from '../../assets/sounds/microwave.mp3';
+// @ts-ignore
 import useSound from "use-sound";
 
 interface iTask {
@@ -22,7 +23,7 @@ const Timer:FC<iTask> = ({num, task, onSuccess, darkTheme}) => {
   const [enabled, setEnabled] = useState(false)
   const [time, setTime] = useState(timerState.timeLeft)
   const initTime = useRef(timerState.timeLeft)
-  const [themeState, setThemeState] = useState<typeof c.head_paused | typeof c.head_started | ''>(timerState.theme)
+  const [themeState, setThemeState] = useState<string>(timerState.theme)
   const [pauseTime, setPauseTime] = useState(timerState.pauseTime)
   const [pauseCount, setPauseCount] = useState(timerState.pauseCount)
   const [play] = useSound(boop)

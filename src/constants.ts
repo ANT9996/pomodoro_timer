@@ -1,7 +1,11 @@
 import {tDay} from "./types";
 
 export const DAYS_OF_WEEK: tDay['name'][] = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
-export const WEEKS = {
+export const WEEKS: {
+  thisWeek: 0,
+  previousWeek: 7,
+  twoWeeksAgo: 14
+} = {
   thisWeek: 0,
   previousWeek: 7,
   twoWeeksAgo: 14

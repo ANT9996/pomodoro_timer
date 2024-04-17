@@ -29,9 +29,9 @@ enum DaysOfWeekReverse {
 }
 
 enum Week {
-  '0' = 'Эта неделя',
-  '7' = 'Прошедшая неделя',
-  '14' = '2 недели назад'
+  'Эта неделя' = 0,
+  'Прошедшая неделя' = 7,
+  '2 недели назад' = 14
 }
 
 export {DaysOfWeek, DaysOfWeekReverse, Week, DaysOfWeekNumber}

@@ -1,0 +1,24 @@
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.darkTheme * {
+  color: #FFFFFF;
+}
+
+.darkTheme ul {
+  background: #3f3f3f;
+  border-color: #333333;
+}
+
+.darkTheme ul > li:hover {
+  background: #333333;
+  z-index: 55;
+}
+
+.darkTheme ul::before {
+  border-color: #333333;
+  background: #3f3f3f;
+}

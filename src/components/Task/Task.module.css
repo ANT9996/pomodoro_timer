@@ -1,0 +1,127 @@
+@keyframes showing {
+  0% {
+    opacity: 0;
+    transform: scaleY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(100%);
+  }
+}
+
+.task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  height: 55px;
+  border-top: 1px solid #e4e4e4;
+  animation: showing .2s;
+  user-select: none;
+}
+
+.task:last-child {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.taskDone {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.taskNumber {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid #c4c4c4;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 106%;
+  color: #333;
+}
+
+.taskName {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 106%;
+  color: #333;
+}
+
+.taskOptions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 1px;
+  width: 165px;
+  background: white;
+  top: 78%;
+  left: calc(100% - 165px / 2 - 13px);
+  border: 1px solid #c4c4c4;
+  z-index: 10;
+}
+
+.taskOptions::before {
+  position: absolute;
+  content: '';
+  top: -6px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+}
+
+.dotsImage {
+  pointer-events: none;
+}
+
+.taskOption {
+  padding: 0 15px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  min-height: 36px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 106%;
+  color: #999;
+}
+
+.taskOption img {
+  width: 18px;
+  height: 18px;
+}
+
+.taskOption:hover {
+  background: #f4f4f4;
+  z-index: 55;
+}
+
+.taskOptionsDots {
+  align-self: stretch;
+  cursor: pointer;
+  margin-left: auto;
+  width: 26px;
+  min-height: 6px;
+  height: 100%;
+  background: url("../../assets/img/svg/taskOptions.svg") no-repeat center;
+  opacity: .7;
+}
+
+.taskOptionsDots:hover {
+  opacity: 1;
+}
+
+.changeOpacityMode {
+  opacity: 1;
+}

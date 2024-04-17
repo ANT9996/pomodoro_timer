@@ -1,0 +1,52 @@
+.graphDay {
+  width: calc(100% / 7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.graphDayScore {
+  position: relative;
+  height: 1%;
+  background: #ea8979;
+  /*background: #dc3e22;*/
+  z-index: 6;
+  transition: background .3s ease-in-out;
+}
+
+.graphDay:hover .graphDayScore {
+  background: #ee735d;
+}
+
+.graphDayScoreSelected {
+  background: #DC3E22;
+}
+
+.graphDay:hover .graphDayScore.graphDayScoreSelected {
+  background: #DC3E22;
+}
+
+.graphDayText {
+  height: 51px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 24px;
+  color: #999;
+  /*color: #dc3e22;*/
+  z-index: 6;
+  flex-shrink: 0;
+}
+
+.graphDayScore.graphDayScoreSelected + .graphDayText {
+  color: #DC3E22;
+}
+
+.graphDayEmpty .graphDayScore {
+  background: #C4C4C4;
+}

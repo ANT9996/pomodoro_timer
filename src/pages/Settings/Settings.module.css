@@ -1,0 +1,15 @@
+.settings {
+
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.darkTheme .title {
+  color: #FFFFFF;
+}

@@ -1,0 +1,310 @@
+.head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  color: #333;
+}
+
+.select {
+  z-index: 5;
+  width: 370px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.option {
+  animation: showing .2s ease;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  padding: 19px 15px;
+  background: #f4f4f4;
+  border-top: 1px solid #dedede;
+  user-select: none;
+  transition: background .1s;
+  z-index: 7;
+}
+
+.option:hover {
+  background: #fafafa;
+}
+
+.selectArrow {
+  position: relative;
+}
+
+.selectArrow::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  background: url("../../assets/img/svg/selectArrow.svg") center center no-repeat;
+  width: 50px;
+  height: 100%;
+  transition: transform .1s;
+}
+
+.selectArrowActive::before {
+  transform: rotate(180deg);
+}
+
+@keyframes showing {
+  0% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.option:first-child {
+  display: flex;
+  border: 0;
+  top: 0;
+}
+
+.option:nth-child(2) {
+  top: 100%;
+}
+
+.option:nth-child(3) {
+  top: 200%;
+}
+
+.option:nth-child(3) {
+  top: 300%;
+}
+
+.activityContainer {
+  --offset: 32px; /*отступ между блоками*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--offset);
+}
+.activity {
+  display: flex;
+  gap: var(--offset);
+}
+
+.leftSide {
+  width: 296px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--offset);
+}
+
+.rightSide {
+  position: relative;
+  width: 100%;
+}
+
+.rightSide::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 51px;
+  background: #ececec;
+  z-index: 5;
+}
+
+.day {
+  padding: 25px;
+  height: 260px;
+  background: #f4f4f4;
+}
+
+.dayTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  color: #333;
+}
+
+.dayParagraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: #333;
+}
+
+.dayParagraph span {
+  font-weight: 700;
+  color: #dc3e22;
+}
+
+.graph {
+  position: relative;
+  height: 100%;
+  display: flex;
+  background: #f4f4f4;
+  padding-left: 56px;
+}
+
+.graphStats {
+  width: 100%;
+  /*padding-bottom: 30px;*/
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.graphTimes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 80px;
+  flex-shrink: 0;
+  width: 109px;
+  padding-bottom: 137px;
+  padding-top: 25px;
+}
+
+.graphTime {
+  font-weight: 400;
+  font-size: 12px;
+  color: #333;
+}
+
+.graphTime::before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  left: 0;
+  transform: translateY(5px);
+  width: 80%;
+  background: gray;
+}
+
+.pomodorosCount {
+  height: 179px;
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+}
+
+.pomodoros {
+  height: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pomodoros img {
+  width: 81px;
+  height: 81px;
+  max-width: 81px;
+  max-height: 81px;
+}
+
+.pomodoros span {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  text-align: center;
+  color: #999;
+}
+
+.pomodorosFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 51px;
+  background: #dc3e22;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  text-align: center;
+  color: #fff;
+}
+
+
+.statsContainer {
+  display: flex;
+  align-items: stretch;
+  gap: var(--offset);
+}
+
+.stat {
+  padding: 25px;
+  flex: 1;
+}
+
+.statTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  color: #333;
+}
+
+.statValue {
+  font-weight: 400;
+  font-size: 64px;
+  color: #333;
+}
+
+.focus {
+  background: #ffdda9 url("../../assets/img/png/focus.png") no-repeat 95% 50%;
+  background-size: 109px 109px;
+}
+
+.timePaused {
+  background: #dfdcfe url("../../assets/img/png/pause.png") no-repeat 95% 50%;
+  background-size: 109px 109px;
+}
+
+.stopCount {
+  background: #c5f1ff url("../../assets/img/png/stop.png") no-repeat 95% 50%;
+  background-size: 109px 109px;
+}
+
+.statEmpty {
+  background-color: #F4F4F4;
+  filter: grayscale(1);
+}
+
+.darkTheme .day,
+.darkTheme .graph,
+.darkTheme .option,
+.darkTheme .statEmpty,
+.darkTheme .pomodorosCount {
+  background: #3f3f3f;
+  border-color: #333333;
+  color: #FFFFFF;
+}
+
+.darkTheme .title,
+.darkTheme .pomodoros span,
+.darkTheme .dayTitle,
+.darkTheme .statEmpty .statTitle,
+.darkTheme .statEmpty .statValue,
+.darkTheme .dayParagraph,
+.darkTheme .graphTime {
+  color: #FFFFFF;
+}
+
+.darkTheme .rightSide::before {
+  background: #4c4c4c;
+}
+
+.darkTheme .option:hover {
+  background: #272727;
+}

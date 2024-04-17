@@ -1,0 +1,56 @@
+.homeContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.tasks {
+  max-width: 515px;
+}
+
+.head {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 137%;
+  color: #333;
+}
+
+.infoList {
+  list-style: disc;
+  padding-left: 16px;
+  margin-bottom: 25px;
+}
+
+
+.infoElem {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 206%;
+  color: #333;
+}
+
+.infoElem::marker {
+  color: #b7280f;
+}
+
+.tasksContainer {
+  width: 370px;
+}
+
+.taskCreateForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.totalMinutes {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 106%;
+  color: #999;
+}
+
+.darkHome .head,
+.darkHome .infoElem {
+  color: #FFFFFF;
+}

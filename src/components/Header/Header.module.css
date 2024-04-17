@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0 10px 63px rgba(0,0,0,0.07);
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.companyName {
+  color:#db3d21;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 300;
+  border-style: hidden;
+  outline: none;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #db3d21;
+  transition: color .2s;
+}
+
+.link svg {
+  transition: fill .2s;
+  fill: #DC3E22;
+
+}
+
+.link:hover .toStatsLinkText,
+.link:hover .toSettingsLinkText{
+  color: #b7280f;
+}
+
+.link:hover svg {
+  fill: #b7280f;
+}
+
+.toStatsLinkText {
+  color:#db3d21;
+  font-size:16px;
+  line-height:17px;
+  font-weight: 400;
+  transition: color .2s
+}
+
+.changeThemeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.changeThemeButton .svg {
+  width: 26px;
+  height: 26px;
+}
+
+.svg {
+  fill: #FFFFFF;
+  stroke: #db3d21;
+  transition: fill .3s;
+}
+
+.changeThemeButton:hover .svg {
+  fill: #535353;
+}
+
+.darkButton .svg {
+  fill: #333333;
+}
+
+.darkButton:hover .svg {
+  fill: #ababab;
+}

@@ -1,0 +1,89 @@
+.timer {
+  width: 100%;
+  min-width: 530px;
+  height: 507px;
+  background: #f4f4f4;
+}
+
+.head {
+  padding: 8px 40px;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c4c4c4;
+  color: #ffffff;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 106%;
+  color: #fff;
+}
+
+.count {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 106%;
+  color: #fff;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.timeRemaining {
+  position: relative;
+  font-weight: 100;
+  font-size: 150px;
+  /*color: #333;*/
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all .3s;
+}
+
+.info {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 106%;
+  color: #999;
+}
+
+.info span {
+  color: #333333;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 25px;
+}
+
+.darkTheme {
+  background: #3f3f3f;
+}
+
+.darkTheme .addTimeButton svg {
+  fill: #272727;
+}
+
+.darkTheme .addTimeButton svg:hover {
+  fill: #a8b64f;
+}
+
+.darkTheme .info {
+  color: #FFFFFF;
+}
+
+.darkTheme .head {
+  background: #272727;
+}

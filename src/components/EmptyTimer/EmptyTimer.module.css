@@ -1,0 +1,56 @@
+.emptyTimer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  color: #333333;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.emptyImage {
+  z-index: 15;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  width: 115px;
+  height: 115px;
+}
+
+.imageContainer::before {
+  position: absolute;
+  content: '';
+  width: 115px;
+  height: 115px;
+  top: 3%;
+  left: 13%;
+  background: url("../../assets/img/png/tomatoHappy.png");
+  z-index: 5;
+  opacity: .7;
+}
+
+.imageContainer::after {
+  position: absolute;
+  content: '';
+  width: 115px;
+  height: 115px;
+  top: 5%;
+  left: 25%;
+  background: url("../../assets/img/png/tomatoHappy.png");
+  z-index: 10;
+  opacity: .5;
+}
+
+.info {
+  font-weight: 600;
+}
+
+.darkTheme {
+  color: #FFFFFF;
+}

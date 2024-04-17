@@ -1,0 +1,12 @@
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.span {
+  margin-right: 8px;
+}
+
+.darkTheme .span {
+  color: #FFFFFF;
+}

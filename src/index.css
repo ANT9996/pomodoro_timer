@@ -1,0 +1,121 @@
+@import "./assets/fonts/style.css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'SF UI Display', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.lightTheme {
+  background: #FFFFFF;
+}
+
+.darkTheme {
+  background: #333333;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 50px;
+  width: max-content;
+  min-width: 173px;
+  height: 55px;
+
+  cursor: pointer;
+  background: #a8b64f;
+  border: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+
+  transition: background .2s;
+}
+
+.btn:hover {
+  background: #899441;
+}
+
+.btn_red {
+  background: #db3d22;
+  color: #FFFFFF;
+}
+
+.btn_red:hover {
+  background: #ae311b;
+}
+
+.btn_stop {
+  width: 138px;
+  height: 55px;
+  padding: 15px 50px;
+  border: 2px solid #dc3e22;
+  background: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #dc3e22;
+}
+
+.btn_stop:hover {
+  background: #dc3e22;
+  color: white;
+}
+
+.btn_disabled {
+  cursor: not-allowed;
+  padding: 15px 50px;
+  height: 55px;
+  border: 2px solid #c4c4c4;
+  background: none;
+  color: #c4c4c4;
+  pointer-events: none;
+}
+
+.container {
+  --width: 1440px;
+  --offset: 80px;
+  max-width: calc(var(--width) - var(--offset) * 2);
+  padding-left: var(--offset);
+  padding-right: var(--offset);
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+@keyframes deleting {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+}
+.deleting {
+  animation: deleting .7s!important;
+}
